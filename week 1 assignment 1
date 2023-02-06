@@ -1,0 +1,197 @@
+import java.util.Scanner;
+
+interface one1
+{
+    public void insertNonPerishable();
+    public void veiwNonPerishable();
+}
+
+interface two2
+{
+    void itemPherisiableinsert();
+    void viewPhersiableItem();
+}
+
+
+class hello implements one1,two2
+{
+       Scanner sc1 = new Scanner(System.in);
+        int coldDrink,waterBotal,biscuits,chips;
+
+       public void insertNonPerishable()
+        {
+            System.out.println("==========================================================================");
+            System.out.println("==========================================================================");
+            System.out.println("Insert ammount of Cold drink:");
+            coldDrink = sc1.nextInt();
+            System.out.println("Insert ammount of water Botal:");
+            waterBotal = sc1.nextInt();
+            System.out.println("Insert ammount of Biscuits:");
+            biscuits = sc1.nextInt();
+            System.out.println("Insert ammount of Chips:");
+            chips = sc1.nextInt();
+
+        }
+       public  void veiwNonPerishable()
+        {
+            System.out.println("===================================================");
+            System.out.println("Non Perishable Items Stock:");
+            System.out.println("Cold drink = "+ coldDrink);
+            System.out.println("water Botal = "+ waterBotal);
+            System.out.println("Biscuits = "+ biscuits);
+            System.out.println("Chips = "+ chips);
+
+
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    Scanner input=new Scanner(System.in);
+
+    int samosha,vegthali,nonvegtali,tea;
+
+
+   public void itemPherisiableinsert()
+    {
+
+
+            System.out.println("===================================================");
+            System.out.println("Insert ammount of samosha:");
+             samosha= input.nextInt();
+            System.out.println("Insert ammount of vegthali:");
+            vegthali = input.nextInt();
+            System.out.println("Insert ammount of nonvegtali:");
+            nonvegtali = input.nextInt();
+            System.out.println("Insert ammount of tea:");
+            tea = input.nextInt();
+
+
+
+    }
+
+   public void viewPhersiableItem()
+    {
+        System.out.println("==============Pherisiable Items============================== ");
+        System.out.println("samosha= "+samosha);
+        System.out.println("vegthali= "+vegthali);
+        System.out.println("nonvegthali= "+nonvegtali);
+        System.out.println("tea L = "+tea);
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    int pp,cc,rr,qq,pps,qqs,rrs,ccs;
+    int totalrevenue;
+   public void remainingitems1()
+    {
+        System.out.println("========================Item Left in Stocks 1 NonPherisable ========================");
+        Scanner objsel=new Scanner(System.in);
+        System.out.println("enter today selling items");
+
+        System.out.println("sell ammount of choldrink:");
+        pps=objsel.nextInt();
+         pp= coldDrink-pps;
+        System.out.println("Remaining "+pp+". "+"Your today  revenue is(coldrink) "+pps*10);
+
+        System.out.println("sell ammount of botal:");
+        qqs=objsel.nextInt();
+         qq= waterBotal-qqs;
+        System.out.println("Remaining "+qq+". "+"Your today  revenue is(waterBotal) "+qqs*20);
+
+        System.out.println("sell ammount of biscuits:");
+         rrs=objsel.nextInt();
+         rr= biscuits-rrs;
+        System.out.println("Remaining "+rr+". "+"Your today  revenue is(biscuits) "+rrs*10);
+
+        System.out.println("sell ammount of chips:");
+        ccs=objsel.nextInt();
+
+        cc= chips-ccs; System.out.println("Remaining "+cc+" "+"Your today  revenue is(chips) "+ccs*5);
+
+
+        System.out.println("=========================================================================");
+        totalrevenue=((pps*10)+(qqs*20)+(rrs*10)+(ccs*5));
+        System.out.println("total revenue through NonPherisible item  "+totalrevenue+" INR");
+        System.out.println("==========================================================================");
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    int sam,veg,non,te;
+    int sam1,veg1,non1,te1;
+    int totalrevenue2;
+
+    public void remainingitems2()
+    {
+        Scanner objsel2=new Scanner(System.in);
+        System.out.println("========================Item Left in Stocks 2 Pherisable========================");
+        System.out.println("sell ammount of samosha:");
+        sam=objsel2.nextInt();
+        sam1=samosha-sam;
+        System.out.println("Remaining "+sam1+" ."+"Your today samosha revenue is "+sam*10);
+
+
+        System.out.println("sell ammount of vegthali:");
+        veg=objsel2.nextInt();
+        veg1=vegthali-veg;
+        System.out.println("Remaining "+veg1+" ."+"Your today vegthali revenue is "+veg*80);
+
+        System.out.println("sell ammount of non_vegthali:");
+        non=objsel2.nextInt();
+        non1=nonvegtali-non;
+        System.out.println("Remaining "+non1+". "+"Your today non_vegthali revenue is "+non*100);
+
+        System.out.println("sell ammount of Tea :");
+        te=objsel2.nextInt();
+        te1=tea-te;
+        System.out.println("Remaining "+te1+" ."+"Your today samosha revenue is "+te*12);
+
+        System.out.println("=========================================================================");
+        totalrevenue2=((sam*10)+(veg*80)+(non*100)+(te*10));
+        System.out.println("total revenue through Pherisible item  "+totalrevenue2+" INR");
+        System.out.println("==========================================================================");
+
+    }
+
+    long total_nonPher_and_Pheri;
+    void totalrevenue3()
+    {
+        total_nonPher_and_Pheri=totalrevenue+totalrevenue2;
+        System.out.println("Totall Selling INR: "+total_nonPher_and_Pheri);
+    }
+
+}
+
+
+
+
+
+public class question1 
+{
+
+     public static void main(String[] args) 
+     {
+
+        hello xx=new hello();
+            xx.insertNonPerishable();
+            xx.veiwNonPerishable();
+            
+            xx.itemPherisiableinsert();
+            xx.viewPhersiableItem();
+           
+
+            
+            xx.remainingitems1();
+            xx.remainingitems2();
+         
+            xx.totalrevenue3();
+            
+
+            
+   
+    }
+}
