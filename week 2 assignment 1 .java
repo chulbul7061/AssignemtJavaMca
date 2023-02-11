@@ -23,7 +23,7 @@ class your_net_salary implements gross_salary,Net_salary
 
     double Gross_salary;
     Scanner obj=new Scanner(System.in);
-   //@Override
+  
     public void gross_salary_Fun()
     {
    
@@ -55,7 +55,7 @@ class your_net_salary implements gross_salary,Net_salary
     
    ///////////////////////////////////////////NET_SALARY_/////////////////////////////////////////////////////////
 
- //  @Override
+ 
 
     double deduction,NPS,professional_tax=200,Medical=500;
     public void Net_salary_Fun()
@@ -65,7 +65,6 @@ class your_net_salary implements gross_salary,Net_salary
 
         deduction=Gross_salary-(NPS+professional_tax+Medical);
 
-        System.out.println("=================================================================================================================");
         System.out.println("=================================================================================================================");
 
         System.out.println("NET_salary : "+deduction+" INR");
@@ -85,9 +84,9 @@ class your_net_salary implements gross_salary,Net_salary
         double government_share =((basic+DA)*14)/100;
         double PRAN_account=employee_share+government_share;
 
-        System.out.println("////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("--------------------------------------------------------------------------------------------------------");
         System.out.println(" About NPS amount : "+PRAN_account);
-        System.out.println("////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println("--------------------------------------------------------------------------------------------------------");
 
 
       }
@@ -99,12 +98,14 @@ class your_net_salary implements gross_salary,Net_salary
         System.out.println("Dearness Allowance(DA)= "+DA+" INR");
         System.out.println("House Rent Allowance(HRA)= "+HRA_cal+" INR");
         System.out.println("Transport Allowance(TA)= "+TA+" INR");
-        System.out.println("DA_on_TA= "+DA_cal+" INR");
+        System.out.println("DA_on_TA= "+TA_on_DA+" INR");
         System.out.println("=================================================================================================================");
         System.out.println("Gross_Salary= "+Gross_salary+" INR");
         System.out.println("=================================================================================================================");
         System.out.println("=================================================================================================================");
 
+        System.out.println("\n");
+        System.out.println("\n");
         System.out.println("=========================Deduction In your salary=====================");
         System.out.println("Nation Pension System(NPS)= "+NPS+" INR");
         System.out.println("Professional= "+professional_tax+" INR");
@@ -112,8 +113,7 @@ class your_net_salary implements gross_salary,Net_salary
         System.out.println("Total Deduction= "+(NPS+professional_tax+Medical)+" INR");
 
         System.out.println("=================================================================================================================");
-        System.out.println("=================================================================================================================");
-        System.out.println("Net Salary= "+deduction);
+        System.out.println("Net Salary/ In Hand = "+deduction);
         
 
         
@@ -128,20 +128,35 @@ public class salary {
 
      public static void main(String[] args)
       {
+        double salary_slip;
         your_net_salary mainobj=new your_net_salary();
 
         mainobj.gross_salary_Fun();
         mainobj.Net_salary_Fun();
 
-        ///////////////////////////////
+        
 
     your_net_salary.about_NPS inner_obj=mainobj.new about_NPS();
 
+    Scanner salary_slip_obj= new Scanner(System.in);
+    
+    
     inner_obj.inner_class_fun();
 
-    // detail deobj=new detail();
-    // deobj.detailed_veiw();
-    mainobj.detailed_veiw();
+    System.out.println("Press 1 to see salary slip ");
+    salary_slip=salary_slip_obj.nextDouble();
+    
+        if(salary_slip==1)
+        {
+        mainobj.detailed_veiw();
+        }
+        else 
+        {
+            System.out.println("Invalid input ");
+        }
+
+
+
        
 
         
