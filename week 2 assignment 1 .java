@@ -74,6 +74,7 @@ class your_net_salary implements gross_salary,Net_salary
        
    }
   
+   double PRAN_account;
    /////////////////////////////////////////INNER  CLASS////////////////////////////////////////////////////////
    class about_NPS
    
@@ -82,7 +83,7 @@ class your_net_salary implements gross_salary,Net_salary
       {
         double employee_share=((basic+DA)*10)/100;
         double government_share =((basic+DA)*14)/100;
-        double PRAN_account=employee_share+government_share;
+        PRAN_account=employee_share+government_share;
 
         System.out.println("--------------------------------------------------------------------------------------------------------");
         System.out.println(" About NPS amount : "+PRAN_account);
@@ -92,6 +93,7 @@ class your_net_salary implements gross_salary,Net_salary
       }
     }
 
+    double CTC;
     void detailed_veiw()
     {
         System.out.println("Basic Salary= "+basic+" INR");
@@ -116,6 +118,8 @@ class your_net_salary implements gross_salary,Net_salary
         System.out.println("Net Salary/ In Hand = "+deduction);
         
 
+        CTC = Gross_salary+PRAN_account;
+        System.out.println("Your CTC = "+CTC*12 +" INR " +" Per annum");
         
     }
     
