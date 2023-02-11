@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import your_net_salary.about_NPS;
+//import your_net_salary.about_NPS;
 
 interface gross_salary
 {
@@ -75,7 +75,7 @@ class your_net_salary implements gross_salary,Net_salary
        
    }
   
-   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+   /////////////////////////////////////////INNER  CLASS////////////////////////////////////////////////////////
    class about_NPS
    
    {
@@ -92,8 +92,36 @@ class your_net_salary implements gross_salary,Net_salary
 
       }
     }
+
+    void detailed_veiw()
+    {
+        System.out.println("Basic Salary= "+basic+" INR");
+        System.out.println("Dearness Allowance(DA)= "+DA+" INR");
+        System.out.println("House Rent Allowance(HRA)= "+HRA_cal+" INR");
+        System.out.println("Transport Allowance(TA)= "+TA+" INR");
+        System.out.println("DA_on_TA= "+DA_cal+" INR");
+        System.out.println("=================================================================================================================");
+        System.out.println("Gross_Salary= "+Gross_salary+" INR");
+        System.out.println("=================================================================================================================");
+        System.out.println("=================================================================================================================");
+
+        System.out.println("=========================Deduction In your salary=====================");
+        System.out.println("Nation Pension System(NPS)= "+NPS+" INR");
+        System.out.println("Professional= "+professional_tax+" INR");
+        System.out.println("Medical "+Medical+" INR");
+        System.out.println("Total Deduction= "+(NPS+professional_tax+Medical)+" INR");
+
+        System.out.println("=================================================================================================================");
+        System.out.println("=================================================================================================================");
+        System.out.println("Net Salary= "+deduction);
+        
+
+        
+    }
     
 }
+
+
 
 
 public class salary {
@@ -111,6 +139,9 @@ public class salary {
 
     inner_obj.inner_class_fun();
 
+    // detail deobj=new detail();
+    // deobj.detailed_veiw();
+    mainobj.detailed_veiw();
        
 
         
