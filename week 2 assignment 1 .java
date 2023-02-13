@@ -122,6 +122,38 @@ class your_net_salary implements gross_salary,Net_salary
         System.out.println("Your CTC = "+CTC*12 +" INR " +" Per annum");
         
     }
+  //////////////////////////////////////////////tax calculate//////////////////////////  
+    if(CTC<=300000)
+    {
+      System.out.println("Your tax is Nill");
+      
+    }
+    else if(CTC>=300001 && CTC<=600000)
+    {
+      System.out.println("Your tax amount is 5% "+((CTC*5)/100));
+    }
+    
+     else if(CTC>=600001 && CTC<=900000)
+    {
+      System.out.println("Your tax amount is 10% "+((CTC*10)/100));
+    }
+    
+      else if(CTC>=900001 && CTC<=1200000)
+    {
+      System.out.println("Your tax amount is 15% "+((CTC*15)/100));
+    }
+    
+      else if(CTC>=1300001 && CTC<=1500000)
+    {
+      System.out.println("Your tax amount is 20% "+((CTC*20)/100));
+    }
+       else if(CTC>=1500001)
+    {
+      System.out.println("Your tax amount is 30% "+((CTC*30)/100));
+    }
+    
+    
+    
     
 }
 
