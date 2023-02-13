@@ -115,7 +115,8 @@ class tax
 
 
 
-public class taxsaving{
+public class week_2_assignment_2
+{
 
     public static void main(String[] args)
     {
