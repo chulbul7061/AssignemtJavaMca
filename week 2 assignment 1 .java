@@ -126,6 +126,10 @@ class your_net_salary implements gross_salary,Net_salary
     //////////////////////////////////////////////tax calculate//////////////////////////
   
     void taxable() {
+        CTC = Gross_salary+PRAN_account;
+        System.out.println("Your CTC = "+CTC*12 +" INR " +" Per annum");
+        CTC2=CTC*12;
+
         if (CTC2 <= 300000) {
             System.out.println("Your tax is Nill");
 
@@ -168,7 +172,7 @@ public class salary {
 
         inner_obj.inner_class_fun();
 
-        System.out.println("Press 1 to see salary slip or press to see taxable amount : ");
+        System.out.println("Press 1 to see salary slip or 2 press to see taxable amount : ");
         salary_slip=salary_slip_obj.nextDouble();
 
         if(salary_slip==1)
